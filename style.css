@@ -1,9 +1,148 @@
 /** general style **/
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+body{
+   margin: 0; /*Per far allargare il contenuto ai bordi della pagina*/
+}
 
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@800&display=swap');
 
 
 /** header **/
+
+
+
+/*Seziono gli spazi occupati dagli elementi dell'header*/
+header{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+div.topheader{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1%;
+    border-bottom: 1px solid rgb(183, 182, 182);
+}
+div.leftside{
+    flex-basis: 15%;
+    align-self: flex-end;
+    display: flex;
+    height: 60px;
+}
+div.rightside{
+    flex-basis: 20%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-start;
+    height: 60px;
+}
+
+div.leftside > figure{
+    flex-basis: 40%;
+    margin: 0%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+div.leftside > a{
+   color: black;
+   text-decoration: none;
+   flex-basis: 60%;
+   margin: 0%;
+   font-size: 1.2em;
+   font-weight: 800;
+   word-spacing: -3px;
+}
+div.topheader > figure{
+    flex-basis: 50%;
+    margin: 0;
+    margin-top: 7%;
+    
+}
+div.rightside > form.whitebutton{
+    flex-basis: 25%;
+    display: flex;
+    margin-bottom: 8%;
+}
+div.rightside > form.redbutton{
+    flex-basis: 75%;
+    display: flex;
+    margin-bottom: 8%;
+}
+
+
+
+/*Ridimensiono le immagini nell'header*/
+div.leftside > figure img{
+    
+    width: 35%;
+    padding-left: 30%;
+}
+div.topheader > figure img[src*=rollingstonelogo]{
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*Sistemo i due pulsanti sulla destra dell header*/
+div.rightside > form.redbutton input{
+    color: white;
+    background-color: rgba(207, 6, 6, 0.774);
+     border: none;
+     width: 65%;
+     font-weight: 800;
+     word-spacing: 2px;
+     cursor: pointer;
+     justify-self: flex-start;
+     padding: 0%;
+}
+
+div.rightside > form.whitebutton input{
+    font-size: 1.2em;
+    font-weight: 800;
+    word-spacing: -5px;
+    background-color: white;
+    border: none;
+    padding: 0;
+    padding-bottom: 4%;
+    cursor: pointer;
+}
+
+
+/*Inizio a lavorare sulla navbar*/
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    flex-basis: 7.3%;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+/*Divido meglio gli spazi per i link piu corti*/
+nav a:nth-child(3), a:nth-child(2){
+    flex-basis: 5%;
+}
+nav a:first-child{
+    padding-bottom: 0.15%;
+}
+
+/*ridimensiono il logo RS Pro nella navbar*/
+nav a img{
+    width: 20%;
+    margin-right: 5%;
+}
 
 
 
@@ -33,9 +172,6 @@
 
 /** footer **/
 
-body{
-    margin: 0%; /*Per allungare il footer a tutta la pagina*/
-}
 
 /*Inizializzo flexbox e divido gli spazi tra l'immagine ed il resto del footer*/
 div.blackfooter:not(div.postfooter){
